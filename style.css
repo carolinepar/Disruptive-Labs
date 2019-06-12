@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
+html {
+    overflow-y:scroll;
+}
+
+header {
+	height: 64px;
+	width: 100%;/*468*/
+	background-color: #0E237F;
+	margin:auto;
+	min-width: 960px;
+}
+
+header img {
+	top: 5px;
+	left: 20px;
+	position: relative;
+	
+}
+
+header::after {
+	content:'';
+	display: table;
+	clear:both;
+}
+
+#nav {
+	
+	float:right;
+	position: relative;
+	left:-50px;
+}
+
+#nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#nav li {
+	display: inline-block;
+	margin-left:50px;
+	padding-top: 25px;
+}
+
+#logo {
+	float:left;
+}
+
+
+#nav li a {
+	text-decoration: none;
+	color:#ffffff;
+	
+}
+
+#nav li a:visited {
+	text-decoration: none;
+}
+
+
+.active{
+	
+}
+
+
+#content {
+	/*width:960px;*/
+	width: 100%;
+	margin: auto;
+	 /*box-shadow: 0px 0px 10px grey;*/
+	padding-bottom: 50px;
+	/*top: 25px;*/
+	position: relative;
+	min-width: 960px;
+	/*maybe remove minwidth later*/
+	
+}
+
+#content * {
+	padding: 0px 10px;
+}
+
+
+/*----------begin home page CSS----------*/
+
+
+#banner {
+	height:200px;
+	width: 100%;
+	margin:auto;
+	position: relative;
+	background-color:red;
+	min-width: 960px;
+	background-image: url(pictures/bannerPrototype.png);
+		
+	
+}
+
+
+
+#introduction {/*
+	padding-top: 30px;
+	padding-bottom: 30px;*/
+	background-color:#D9D9D9;
+	padding: 75px 175px 75px 175px;
+	text-align: justify;
+	
+}
+
+
+#introduction img {
+	float: right;
+	padding-left: 20px;
+}
+
+
+#introduction h3 {
+	font-size: 36px;
+}
+
+
+
+
+
+
+
+
+
+
+h3 {
+	text-align: center;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+#courseSelection {
+	
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#advertisment img{
+	float: left;
+}
+
+#advertisment {
+	height: 200px;
+	padding-bottom: 50px;
+	width: 100%;
+}
+
+#advertisment table{
+	border-spacing: 50px;
+}
+
+#advertiesment table td{
+	padding: 50px;
+}
+
+
+#perSemester {
+	width: 200px;
+	height: 200px;
+	
+	background-color:yellow;
+}
+
+#perSemester:hover{
+	background-color:blue;
+}
+
+#perWeek {
+	width: 200px;
+	height: 200px;
+	background-color:blue;
+}
+
+#perWeek:hover{
+	background-color:yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#howItWorks h3 {
+	padding: 10px;
+	
+}
+
+#howItWorks{
+	padding-top:75px;
+	padding-bottom:75px;
+	background-color: #FFFEE3;
+}
+
+#howItWorksImg {
+	width:960px;
+	margin:auto;
+}
+
+
+
+
+#footer h3{
+	text-align: left;
+}
+
+#footer {
+	padding: 50px;
+	top: 50px;
+	position:relative;
+	background-color: #0E237F;
+	width: 100%;
+	height:200px;
+	margin:auto;
+	color: #ffffff;
+	min-width: 960px;
+	
+}
+
+
+
+
+
