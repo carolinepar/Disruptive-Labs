@@ -171,22 +171,28 @@ h3 {
 #perSemester {
 	width: 200px;
 	height: 200px;
-	
-	background-color:yellow;
+	background-image: url(#);
+	background-color:aliceblue;
+	transition: background-color .5s;
+	/*will become background-image later*/
 }
 
 #perSemester:hover{
-	background-color:blue;
+	background-color:transparent;
+	
 }
 
 #perWeek {
 	width: 200px;
 	height: 200px;
-	background-color:blue;
+	background-color:aliceblue;
+	background-image: url(#);
+	transition: background-color .5s;
+	/*will become background-image later*/
 }
 
 #perWeek:hover{
-	background-color:yellow;
+	background-color:transparent;
 }
 
 
@@ -242,8 +248,6 @@ h3 {
 	min-width: 960px;
 	
 }
-
-
 
 
 
