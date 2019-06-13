@@ -114,7 +114,7 @@ header::after {
 	padding-top: 30px;
 	padding-bottom: 30px;*/
 	background-color:#D9D9D9;
-	padding: 75px 175px 75px 175px;
+	padding: 75px 175px 100px 175px;
 	text-align: justify;
 	
 }
@@ -126,15 +126,9 @@ header::after {
 }
 
 
-#introduction h3 {
+h3.heading {
 	font-size: 36px;
 }
-
-
-
-
-
-
 
 
 
@@ -144,9 +138,11 @@ h3 {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 }
 #courseSelection {
-	
+	z-index: 5;
 	padding-top: 50px;
 	padding-bottom: 50px;
+	position: relative;
+	 box-shadow: 0px 0px 10px grey;
 }
 
 #advertisment img{
@@ -154,9 +150,12 @@ h3 {
 }
 
 #advertisment {
+	z-index: 1;
+	background-color: #D9D9D9;
 	height: 200px;
-	padding-bottom: 50px;
+	padding-bottom: 200px;
 	width: 100%;
+	padding-top: 30px;
 }
 
 #advertisment table{
@@ -198,31 +197,31 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #howItWorks h3 {
 	padding: 10px;
+	padding-bottom:40px;
 	
 }
 
 #howItWorks{
 	padding-top:75px;
 	padding-bottom:75px;
-	background-color: #FFFEE3;
+	/*background-color: #FFFEE3;*/
+	background-color:#D9D9D9;
 }
+
+#howItWorks ol {
+	width: 600px;
+	margin:auto;
+	
+}
+
+#howItWorks li {
+	padding: 20px;
+}
+
+
+
 
 #howItWorksImg {
 	width:960px;
@@ -248,6 +247,68 @@ h3 {
 	min-width: 960px;
 	
 }
+
+
+
+
+
+/*--------------- Begin Course Selection CSS ----------------*/
+
+
+
+
+.pageHeading {
+	font-size: 24px;
+
+	
+}
+
+
+.pageContent {
+
+	width: 100%;
+	margin: auto;
+	padding-bottom: 50px;
+	position: relative;
+	min-width: 960px;
+	
+	paddign-top:50px;
+	top:30px;
+}
+
+
+.pageContent * {
+	padding: 0px 10px;
+}
+
+#contentCourseSelection table{
+	padding: 50px;
+}
+
+#contentCourseSelection td {
+	width:200px;
+	height:200px;
+	background-color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
