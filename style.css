@@ -359,16 +359,61 @@ footer {
 
 
 
+/*----------kits css----------*/
+
+
+
+#contentKits{
+	width: 960px;
+}
+
+#contentKits *{
+	margin: auto;
+}
+
+#shopNow{
+	text-align: center;
+}
+#shopNow button {
+	
+	background-color: #0E237F;
+	color:#fff;
+	border-radius: 50px;
+	padding: 30px;
+	width: 200px;
+	cursor: pointer;
+}
 
 
 
 
 
 
+/*----------about css----------*/
 
 
 
+#contentContact a{
+	text-decoration: none;
+}
 
+#contentContact {
+	width: 960px;
+}
+
+#contentContact p{
+	text-align: center;
+}
+
+#faq .question {
+	text-align: left;
+	font-weight: bold;
+}
+
+#faq .answer {
+	text-align: left;
+	
+}
 
 
 
