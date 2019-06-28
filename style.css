@@ -12,7 +12,7 @@
         vertical-align: baseline;
         background: transparent;
     }
-
+c
 html {
     overflow-y:scroll;
 }
@@ -86,15 +86,14 @@ header::after {
 /***** Content *****/
 
 #content {
-	/*width:960px;*/
-	width: 100%;
+	/*width: 100%;*/
+	width: 960px;
 	margin: auto;
-	 /*box-shadow: 0px 0px 10px grey;*/
 	padding-bottom: 50px;
-	/*top: 25px;*/
 	position: relative;
-	min-width: 960px;
-	/*maybe remove minwidth later*/
+	/*min-width: 960px;*/
+	top:30px;
+	padding-top: 50px;
 	
 }
 
@@ -120,10 +119,7 @@ header::after {
 
 
 
-#introduction {/*
-	padding-top: 30px;
-	padding-bottom: 30px;*/
-	background-color:#D9D9D9;
+#introduction {
 	padding: 75px 175px 100px 175px;
 	text-align: justify;
 	
@@ -136,7 +132,7 @@ header::after {
 }
 
 
-h3.heading {
+h3.indexHeading {
 	font-size: 36px;
 }
 
@@ -157,23 +153,6 @@ h3 {
 
 #advertisment img{
 	float: left;
-}
-
-#advertisment {
-	z-index: 1;
-	background-color: #D9D9D9;
-	height: 200px;
-	padding-bottom: 200px;
-	width: 100%;
-	padding-top: 30px;
-}
-
-#advertisment table{
-	border-spacing: 50px;
-}
-
-#advertiesment table td{
-	padding: 50px;
 }
 
 
@@ -247,7 +226,7 @@ h3 {
 
 
 
-.pageHeading {
+.heading {
 	font-size: 24px;
 
 	
@@ -273,8 +252,8 @@ h3 {
 	padding: 0px 10px;
 }
 
-.coursesContent {
-}
+
+
 
 #contentCourseSelection table{
 	padding: 50px;
@@ -413,6 +392,10 @@ h3 {
 
 /*---------- About ----------*/
 
+#aboutUsDescription {
+	padding: 50px;
+}
+
 
 /*---------- Login ----------*/
 
@@ -420,6 +403,34 @@ h3 {
 /*---------- Registration ----------*/
 
 
+
+/*---------- studentPortal ----------*/
+
+#welcomeName {
+	text-align: right;
+	padding-top: 20px;
+	position: relative;
+	padding-right: 30px;
+}
+
+#yourClasses {
+	background-color: aliceblue;
+	/*background color temporary*/
+	width: 250px;
+	padding: 50px;
+	position: relative;
+	float: left;
+}
+
+#code {
+	background-color: aliceblue;
+	/*background color temporary*/
+	width: 250px;
+	padding: 50px;
+	position: relative;
+	float: right;
+	
+}
 
 
 
@@ -429,8 +440,13 @@ h3 {
 	text-align: left;
 }
 
-#footer {
+.classFooter {
 	top: 50px;
+}
+
+
+
+#footer {
 	position:relative;
 	background-color: #0E237F;
 	width: 100%;
@@ -440,8 +456,8 @@ h3 {
 	min-width: 960px;
 }
 
-#footer * {
-	padding: 50px;
+#footer p, h3 {
+	padding: 50px 0px 0px 50px;
 }
 
 
