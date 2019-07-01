@@ -12,7 +12,7 @@ $gender = $_POST['gender'];
 
 $error = false;
 
-//if any of them are black, send error
+//if any of them are blacnk, send error
 
 
 //check if username is already in table -- also email??
@@ -23,19 +23,22 @@ if($password != $confirmPassword) {
 	//then go back to register page
 } 
 
-$getUsers = "SELECT * FROM users WHERE username = $username" ;
+$getUsers = "SELECT * FROM users WHERE username = '$username'" ;
 
 
 $resultUsers = mysqli_query($connection,$getUsers);
+echo $resultUsers->data_seek(0);
 
-if($resultUsers->field_count > 0){
+if($resultUsers->data_seek(0)){
 	$error = true;
 	echo "Username already taken <br>";
-	//then go back to register page
 }
 
-
 mysqli_free_result($resultUsers);
+
+
+
+//need to add what happens if there is an error
 
 if(!$error){
 
@@ -47,13 +50,6 @@ if(!$result)
 {
     die("database query fail");
 } 
-//else {
-//	echo("Success");
-//}
-
-
-mysqli_free_result($result);
-	
 }
 mysqli_close($connection);
 
