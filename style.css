@@ -399,6 +399,10 @@ h3 {
 
 /*---------- Login ----------*/
 
+p #logIn{
+	text-align: center;
+}
+
 
 /*---------- Registration ----------*/
 
