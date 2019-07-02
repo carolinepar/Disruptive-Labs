@@ -27,7 +27,6 @@ $getUsers = "SELECT * FROM users WHERE username = '$username'" ;
 
 
 $resultUsers = mysqli_query($connection,$getUsers);
-echo $resultUsers->data_seek(0);
 
 if($resultUsers->data_seek(0)){
 	$error = true;
@@ -35,8 +34,6 @@ if($resultUsers->data_seek(0)){
 }
 
 mysqli_free_result($resultUsers);
-
-
 
 //need to add what happens if there is an error
 
