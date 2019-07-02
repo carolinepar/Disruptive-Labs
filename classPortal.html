@@ -14,7 +14,12 @@
 	
 	
 		<div id="tabs" style="background-color: black; color: white">
-			
+			<button onclick="openTab("Files")">Files</button>
+			<button onclick="openTab("Lectures")">Lectures</button>
+			<button onclick="openTab("Videos")">Videos</button>
+			<button onclick="openTab("Problem_Sets")">Problem Sets</button>
+			<button onclick="openTab("Tutoring")">Tutoring</button>
+			<button onclick="openTab("Settings")">Settings</button>
 			
 		</div>
 		
@@ -33,7 +38,7 @@
 			
 		</div>
 		
-		<div id="Problem sets" class="class" style="display:none">
+		<div id="Problem_Sets" class="class" style="display:none">
 			<p> Info here</p>
 			
 		</div>
@@ -47,14 +52,22 @@
 			<p>Info here</p>
 		</div>
 		
-	
+		<p><a href="login_portal.html" target="_self">Return to My Classes</a></p>
+		
+		<script>
+			function openTab(tabName) {
+				var i;
+				var x = document.getElementsByClassName("class");
+				for (i = 0; i < x.length; i++) {
+  					x[i].style.display = "none";  
+  				}
+  				document.getElementById(cityName).style.display = "block";  
+			}
+		</script>
 	
 	
 		
 	</div><!--end content-->
-	
-	
-	
 	
 	
 </body>
