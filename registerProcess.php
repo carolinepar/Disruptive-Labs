@@ -1,6 +1,10 @@
 <?php
-
+session_start();
 include('connect_db.php');
+
+
+$_SESSION['firstName'] = $_POST['firstName'];
+$_SESSION['lastName'] = $_POST['lastName'];
 
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
@@ -27,6 +31,7 @@ $getUsers = "SELECT * FROM users WHERE username = '$username'" ;
 
 
 $resultUsers = mysqli_query($connection,$getUsers);
+echo $resultUsers->data_seek(0);
 
 if($resultUsers->data_seek(0)){
 	$error = true;
@@ -34,6 +39,8 @@ if($resultUsers->data_seek(0)){
 }
 
 mysqli_free_result($resultUsers);
+
+
 
 //need to add what happens if there is an error
 
@@ -47,9 +54,36 @@ if(!$result)
 {
     die("database query fail");
 } 
+	
+	//now create a table to keep track of their classes
+	
+	$name = "courses" . $username;
+	
+	$query = "CREATE TABLE " . $name . " (courseID INT, courseName TEXT, PRIMARY KEY(courseID))";
+	
+	
+$result = mysqli_query($connection,$query);
+
+if(!$result)
+{
+    die("database query fail");
+} 
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
 mysqli_close($connection);
 
-//header('Location:login_portal.html');
+header('Location:login_portal.php');
 
 ?>
