@@ -437,7 +437,14 @@ p #logIn{
 	
 }
 
+/*---------- classPortal ----------*/
 
+#classInfo {
+	background-color: aliceblue;
+	/*background color temporary*/
+	position: relative;
+	float: left;
+}
 
 /***** Footer *****/
 
