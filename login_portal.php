@@ -40,16 +40,48 @@ include('connect_db.php');
 		<h3 class="heading">Student Portal</h3> 
 		<br><br><br><br>
 		<div id="yourClasses">
+			
+			<?php
+	
+				$query = "SELECT courseName FROM courses" . $_SESSION['username'];
+				$courseTable = mysqli_query($connection,$query);
+		
+				if(!$courseTable)
+					{
+    					die("database query fail");
+					} 
+		
+				$length = $courseTable->num_rows; 
+	
+			?>
+			
+			
      		<h1>Your classes:</h1>
 			<br>
+    		<?php 
+				if($length == 0) {
+					echo 'You are not currently enrollled in any classes';
+				} else {
+					echo "<ul>";
+					while($row = mysqli_fetch_assoc($courseTable) ){
     
-			<ul>
+						echo "<li style='font-size: 20px'><a href='#'>" . $row['courseName'] . "</a></li>";
+
+					}
+					echo "</ul>";
+				}
+			
+				mysqli_free_result($courseTable);
+				mysqli_close($connection);
+			
+			?>		
+			
+			<!--<ul>
 				<li style="font-size: 20px"><a href="classPortal.html">Class 1    Insert info about class here</a><br>
      	    			<li style="font-size: 20px"><a href="classPortal.html">Class 2    Insert info about class here</a><br>
 				<li style="font-size: 20px"><a href="classPortal.html">Class 3    Insert info about class here</a><br>
-			</ul>
+			</ul>-->
 			
-			<!--might need to be changed to ul-->
 			
 		</div><!--end yourClasses-->
 			
