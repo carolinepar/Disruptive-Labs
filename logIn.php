@@ -1,4 +1,6 @@
-
+<?php
+include('connect_db.php');
+?>
 <!doctype html>
 <html>
 	<head>
@@ -36,29 +38,33 @@
 	 
 			<div class="logInBox">
        		    <form action="loginProcess.php" method="POST"> 
-                <br><br>
+					
+                	<br><br>
                 
-                <div>
-                    <label>Username: </label> 
-                    <input type='text' name='username' placeholder="Enter User Name">
-                </div> 
-
-                <br>
+               		 <div>
+                  		<label>Username: </label> 
+                  		<input type='text' name='username' placeholder="Enter User Name">
+              		</div> 
+	
+             		<br>
                 
-                <div>
-                    <label>Password: </label>
-                    <input type='password' name='password' placeholder="*********">
-                </div>
+             	   <div>
+            	        <label>Password: </label>
+           		        <input type='password' name='password' placeholder="*********">
+             	   </div>
                 
-                <br>
+             	   <br>
                 
-                <div>
-                    <input type='submit' name='login' class="logRegButtons" value="Login">
-                </div>
+               		<div>
+                   		<input type='submit' name='login' class="logRegButtons" value="Login">
+               		</div>
 
             	</form> 
+				
      	  	</div><!--END logInBox-->
+			
       		<br><br><br>
+			
  	       <div class="goToRegBox">
     	            <p>Are you new here?</p>
      	           <a href="register.php" class="logRegButtons">Register</a>
