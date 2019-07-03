@@ -60,7 +60,7 @@ include('connect_db.php');
 			<br>
     		<?php 
 				if($length == 0) {
-					echo 'You are not currently enrollled in any classes';
+					echo 'You are not currently enrolled in any classes';
 				} else {
 					echo "<ul>";
 					while($row = mysqli_fetch_assoc($courseTable) ){
