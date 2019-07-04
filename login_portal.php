@@ -27,7 +27,7 @@ include('connect_db.php');
 				<li><a href="#" target='_self'>Enter A Code</a></li>
 				<li><a href="#" target='_self'>Payment</a></li>
 				<li><a href="#" target='_self'>Settings</a></li>
-				<li><a href="#" class="logIn" target='_self'>Log Out</a></li>
+				<li><a href="logoutProcess.php" target='_self'>Log Out</a></li>
 			
 			</ul>
 		
