@@ -65,7 +65,10 @@ include('connect_db.php');
 					echo "<ul>";
 					while($row = mysqli_fetch_assoc($courseTable) ){
     
-						echo "<li style='font-size: 20px'><a href='#'>" . $row['courseName'] . "</a></li>";
+						$link = 'classPortal.php?course=' . $row['courseName'];
+						
+						echo "<li style='font-size: 20px'><a 
+						href='" . $link . "'>" . $row['courseName'] . "</a></li>";
 
 					}
 					echo "</ul>";
