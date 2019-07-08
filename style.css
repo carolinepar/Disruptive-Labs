@@ -405,6 +405,7 @@ p #logIn{
 }
 
 
+
 /*---------- Registration ----------*/
 
 
@@ -445,6 +446,13 @@ p #logIn{
 	position: relative;
 	float: left;
 }
+
+#fileList {
+	position: relative;
+	left: 500px;
+}
+
+
 
 /***** Footer *****/
 
