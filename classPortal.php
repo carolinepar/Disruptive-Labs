@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('connect_db.php');
 $course = $_GET['course'];
 
 ?>
@@ -50,6 +51,41 @@ $course = $_GET['course'];
 		
 		<div id="Files" class="w3-container class" >
 			<p>Info here</p>
+			
+			<?php
+			
+			$query = "SELECT * FROM " . $course;
+				//if there are available files: make the ol... else, echo unlock content by inserting your class code
+				//make a processing page before this, that determines the course info so it doesn't have to do it here???
+			
+				
+$result = mysqli_query($connection,$query);
+
+if(!$result)
+{
+    die("database query fail");
+} 
+	$length = $result->num_rows; 
+			if($length == 0) {
+				echo "There are no files for this class.";
+				
+			} else {
+				echo "<div id='fileList'><ol>";
+				while($row = mysqli_fetch_assoc($result) ){
+    					
+						if($row['fileType'] == "text"){
+						echo "<li><a href='#'>" . $row['fileName'] . "</a></li>";
+						}
+					}
+					echo "</ol></div><!--end fileList-->";
+				
+			//fetch which weekt he student is currently on, and do not show files from weeks after that
+				
+			}
+			
+			
+			?>
+			
 
 		</div>
 		
