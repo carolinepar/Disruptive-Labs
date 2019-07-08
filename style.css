@@ -44,6 +44,7 @@ header::after {
 	position: relative;
 	left:-50px;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    z-index: 3;
 }
 
 #nav ul {
@@ -60,6 +61,11 @@ header::after {
 
 #logo {
 	float:left;
+    width: 320px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 
@@ -109,11 +115,12 @@ header::after {
 #banner {
 	height:200px;
 	width: 100%;
-	margin:auto;
-	position: relative;
-	background-color:red;
+	margin: auto;
+    top: 20px;
+    position: relative;
 	min-width: 960px;
 	background-image: url(pictures/bannerPrototype.png);
+    z-index: 1;
 		
 	
 }
