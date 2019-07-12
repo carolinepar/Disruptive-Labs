@@ -117,15 +117,36 @@ header::after {
 	width: 100%;
 	margin: auto;
     top: 20px;
-    position: relative;
+    position: absolute;
 	min-width: 960px;
 	background-image: url(pictures/bannerPrototype.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100% /*cover*/;
+	/* You guys tell me what you think - we could also use 'cover' here but with the image having words it's not great. - personally I think we should separate the words from that image & do background size cover.*/
     z-index: 1;
-		
-	
 }
 
+.space{
+	width: 100%;
+	height: 500px;
+    background-color: burlywood;
+} /*temporary to figure out what to do with middle of the page*/
 
+.featureboxes {
+	background-color: blue;
+    display: grid; 
+	grid-template-columns: 70% 30%;
+}
+
+.feature{
+    width: 100px;
+    height: 100px;
+    background-color: pink; 
+}
+
+/* .featureboxes > .feature:nth-child(odd){ */
+	/* background-color: red; */
+}
 
 #introduction {
 	padding: 75px 175px 100px 175px;
