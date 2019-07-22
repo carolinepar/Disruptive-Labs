@@ -43,7 +43,7 @@ include('connect_db.php');
 			
 			<?php
 	
-				$query = "SELECT courseName FROM courses" . $_SESSION['username'];
+				$query = "SELECT * FROM courses" . $_SESSION['username'];
 				$courseTable = mysqli_query($connection,$query);
 		
 				if(!$courseTable)
@@ -65,7 +65,7 @@ include('connect_db.php');
 					echo "<ul>";
 					while($row = mysqli_fetch_assoc($courseTable) ){
     
-						$link = 'classPortal.php?course=' . $row['courseName'];
+						$link = 'classPortal.php?course=' . $row['courseName'] . '&week=' . $row['weekNumber'];
 						
 						echo "<li style='font-size: 20px'><a 
 						href='" . $link . "'>" . $row['courseName'] . "</a></li>";
