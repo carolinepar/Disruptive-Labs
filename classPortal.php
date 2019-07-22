@@ -2,6 +2,7 @@
 session_start();
 include('connect_db.php');
 $course = $_GET['course'];
+$week = $_GET['week'];
 
 ?>
 <!doctype html>
@@ -50,8 +51,65 @@ $course = $_GET['course'];
 		</div>
 		
 		<div id="Files" class="w3-container class" >
-			<p>Info here</p>
 			
+			<?php
+			
+			$query = "SELECT * FROM " . $course;
+				//if there are available files: make the ol... else, echo unlock content by inserting your class code
+				//make a processing page before this, that determines the course info so it doesn't have to do it here???
+			
+				
+$result = mysqli_query($connection,$query);
+
+if(!$result)
+{
+    die("database query fail");
+} 
+			
+	$length = $result->num_rows; 
+			if($length == 0) {
+				echo "There are no files for this class.";
+				
+			} else {
+				
+				$i = 0;
+				
+				echo "<br><br><div id='fileList'><ol>";
+				while($row = mysqli_fetch_assoc($result) ){
+    					
+						if($row['fileType'] == "text"){
+							
+							if($row['weekAvailable']<= $week) {
+								echo "<li><a href='#'>" . $row['fileName'] . "</a></li>";
+								$i++;
+							}
+							
+							
+						
+						}
+					}
+				
+					echo "</ol></div><br><br><!--end fileList-->";
+				if($i==0){
+					echo "There are no files for this class.";
+				}
+				
+			//fetch which weekt he student is currently on, and do not show files from weeks after that
+				
+			}
+			
+			
+			?>
+			
+
+		</div>
+		
+		<div id="Lectures" class="w3-container class" style="display:none">
+			<p>More Info here</p>
+			
+		</div>
+		
+		<div id="Videos" class="w3-container class" style="display:none">
 			<?php
 			
 			$query = "SELECT * FROM " . $course;
@@ -70,14 +128,28 @@ if(!$result)
 				echo "There are no files for this class.";
 				
 			} else {
-				echo "<div id='fileList'><ol>";
+				
+				$i = 0;
+				
+				echo "<br><br><div id='fileList'><ol>";
 				while($row = mysqli_fetch_assoc($result) ){
     					
-						if($row['fileType'] == "text"){
-						echo "<li><a href='#'>" . $row['fileName'] . "</a></li>";
+						if($row['fileType'] == "video"){
+							
+							if($row['weekAvailable']<= $week) {
+								echo "<li><a href='#'>" . $row['fileName'] . "</a></li>";
+								$i++;
+							}
+							
+							
+						
 						}
 					}
-					echo "</ol></div><!--end fileList-->";
+				
+					echo "</ol></div><br><br><!--end fileList-->";
+				if($i==0){
+					echo "There are no files for this class.";
+				}
 				
 			//fetch which weekt he student is currently on, and do not show files from weeks after that
 				
@@ -86,21 +158,56 @@ if(!$result)
 			
 			?>
 			
-
-		</div>
-		
-		<div id="Lectures" class="w3-container class" style="display:none">
-			<p>More Info here</p>
-			
-		</div>
-		
-		<div id="Videos" class="w3-container class" style="display:none">
-			<p>Info here</p>
-			
 		</div>
 		
 		<div id="Problem_Sets" class="w3-container class" style="display:none">
-			<p>More Info here</p>
+			<?php
+			
+			$query = "SELECT * FROM " . $course;
+				//if there are available files: make the ol... else, echo unlock content by inserting your class code
+				//make a processing page before this, that determines the course info so it doesn't have to do it here???
+			
+				
+$result = mysqli_query($connection,$query);
+
+if(!$result)
+{
+    die("database query fail");
+} 
+	$length = $result->num_rows; 
+			if($length == 0) {
+				echo "There are no files for this class.";
+				
+			} else {
+				
+				$i = 0;
+				
+				echo "<br><br><div id='fileList'><ol>";
+				while($row = mysqli_fetch_assoc($result) ){
+    					
+						if($row['fileType'] == "problems"){
+							
+							if($row['weekAvailable']<= $week) {
+								echo "<li><a href='#'>" . $row['fileName'] . "</a></li>";
+								$i++;
+							}
+							
+							
+						
+						}
+					}
+				
+					echo "</ol></div><br><br><!--end fileList-->";
+				if($i==0){
+					echo "There are no files for this class.";
+				}
+				
+			//fetch which weekt he student is currently on, and do not show files from weeks after that
+				
+			}
+			
+			
+			?>
 			
 		</div>
 		
