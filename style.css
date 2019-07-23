@@ -76,7 +76,6 @@ header::after {
 
 #nav li a:visited {
 	text-decoration: none;
-    color: burlywood;
 }
 
 
@@ -511,11 +510,3 @@ p #logIn{
 }
 
 
-/*
-footer {
-	margin-top: 20px; 
-	padding-bottom:20px; 
-	background-color:#e8491d; 
-	text-align:center; 
-	color:#ffffff; 
-} */
