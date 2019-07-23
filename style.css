@@ -121,7 +121,6 @@ header::after {
 /*---------- Home Page ----------*/
 
 
-<<<<<<< Updated upstream
 #banner {
 	height:200px;
 	width: 100%;
@@ -136,46 +135,27 @@ header::after {
     z-index: 1;
 }
 
-.space{
-	width: 100%;
-	height: 500px;
-    background-color: burlywood;
-} /*temporary to figure out what to do with middle of the page*/
-
-.featureboxes {
-	background-color: blue;
-    display: grid; 
-	grid-template-columns: 70% 30%;
-}
-
-.feature{
-    width: 100px;
-    height: 100px;
-    background-color: pink; 
-}
-
-/* .featureboxes > .feature:nth-child(odd){ */
-	/* background-color: red; */
-=======
-
-.sixintroboxwrap{
+.sixfeatureboxwrap{
     margin: 0 auto;
     padding: 1px 18%;
 }
 
-.sixintrobox{
+.sixfeatureboxes{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 200px;
 }
 
-.introbox{
+.featurebox{
     background-color: red;
 }
 
-.introbox:nth-child(odd){
+.featurebox:nth-child(odd){
     background-color: darkmagenta;
->>>>>>> Stashed changes
+}
+
+#howItWorksPic{
+    width: 100%;
 }
 
 #introduction {
