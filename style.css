@@ -18,10 +18,9 @@ html {
 }
 
 header {
-	height: 64px;
+	height: auto;
 	width: 100%;/*468*/
 	background-color: #0E237F;
-	margin:auto;
 	min-width: 960px;
 }
 
@@ -56,7 +55,7 @@ header::after {
 #nav li {
 	display: inline-block;
 	margin-left:50px;
-	padding-top: 25px;
+	padding-top: 20px;
 }
 
 #logo {
@@ -81,10 +80,19 @@ header::after {
 
 
 .active{
-	
+	color: cadetblue;
 }
 
-
+#banner {
+	height:200px;
+	width: 100%;
+	margin: auto;
+    top: 30px;
+    position: relative;
+	min-width: 960px;
+	background-image: url(pictures/bannerPrototype.png);
+    z-index: 1;
+}
 
 
 
@@ -99,7 +107,7 @@ header::after {
 	padding-bottom: 50px;
 	position: relative;
 	/*min-width: 960px;*/
-	top:30px;
+	top: 30px;
 	padding-top: 50px;
 	
 }
@@ -117,15 +125,37 @@ header::after {
 	width: 100%;
 	margin: auto;
     top: 20px;
-    position: relative;
+    position: absolute;
 	min-width: 960px;
 	background-image: url(pictures/bannerPrototype.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100% /*cover*/;
+	/* You guys tell me what you think - we could also use 'cover' here but with the image having words it's not great. - personally I think we should separate the words from that image & do background size cover.*/
     z-index: 1;
-		
-	
 }
 
+.sixfeatureboxwrap{
+    margin: 0 auto;
+    padding: 1px 18%;
+}
 
+.sixfeatureboxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+}
+
+.featurebox{
+    background-color: red;
+}
+
+.featurebox:nth-child(odd){
+    background-color: darkmagenta;
+}
+
+#howItWorksPic{
+    width: 100%;
+}
 
 #introduction {
 	padding: 75px 175px 100px 175px;
@@ -133,19 +163,14 @@ header::after {
 	
 }
 
-
 #introduction img {
 	float: right;
 	padding-left: 20px;
 }
 
-
 h3.indexHeading {
 	font-size: 36px;
 }
-
-
-
 
 h3 {
 	text-align: center;
@@ -190,9 +215,6 @@ h3 {
 #perWeek:hover{
 	background-color:transparent;
 }
-
-
-
 
 #howItWorks h3 {
 	padding: 10px;
@@ -461,6 +483,27 @@ p #logIn{
 
 
 
+/*---------- payment ----------*/
+
+
+
+#cancelPayment{
+	text-align: center;
+}
+#cancelPayment button {
+	
+	background-color: #0E237F;
+	color:#fff;
+	border-radius: 50px;
+	padding: 30px;
+	width: 300px;
+	cursor: pointer;
+}
+
+
+
+
+
 /***** Footer *****/
 
 #footer h3{
@@ -488,11 +531,3 @@ p #logIn{
 }
 
 
-/*
-footer {
-	margin-top: 20px; 
-	padding-bottom:20px; 
-	background-color:#e8491d; 
-	text-align:center; 
-	color:#ffffff; 
-} */
