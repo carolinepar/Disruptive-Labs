@@ -5,6 +5,7 @@ include('connect_db.php');
 
 $_SESSION['firstName'] = $_POST['firstName'];
 $_SESSION['lastName'] = $_POST['lastName'];
+$_SESSION['username'] = $_POST['username'];
 
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
@@ -69,6 +70,20 @@ if(!$result)
     die("database query fail");
 } 
 	
+	
+	//now create a table to track their codes
+	
+	$name = "codes" . $username;
+	
+	$query = "CREATE TABLE " . $name . " (code INT, courseID INT, PRIMARY KEY(code))";
+	
+	
+$result = mysqli_query($connection,$query);
+
+if(!$result)
+{
+    die("database query fail");
+} 
 	
 	
 	

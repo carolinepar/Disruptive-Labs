@@ -23,9 +23,9 @@ include('connect_db.php');
 			<ul>
 		
 				<li><a href="index.html" target='_self'>Home</a></li>
-				<li><a href="#" target='_self'>My Classes</a></li>
-				<li><a href="#" target='_self'>Enter A Code</a></li>
-				<li><a href="#" target='_self'>Payment</a></li>
+				<li><a href="login_portal.php" target='_self'>My Classes</a></li>
+				<li><a href="login_portal.php" target='_self'>Enter A Code</a></li>
+				<li><a href="payment.html" target='_self'>Payment</a></li>
 				<li><a href="#" target='_self'>Settings</a></li>
 				<li><a href="logoutProcess.php" target='_self'>Log Out</a></li>
 			
@@ -78,13 +78,6 @@ include('connect_db.php');
 				mysqli_close($connection);
 			
 			?>		
-			
-			<!--<ul>
-				<li style="font-size: 20px"><a href="classPortal.html">Class 1    Insert info about class here</a><br>
-     	    			<li style="font-size: 20px"><a href="classPortal.html">Class 2    Insert info about class here</a><br>
-				<li style="font-size: 20px"><a href="classPortal.html">Class 3    Insert info about class here</a><br>
-			</ul>-->
-			
 			
 		</div><!--end yourClasses-->
 			
