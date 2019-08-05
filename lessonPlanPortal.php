@@ -83,6 +83,8 @@ $week = $_GET['week'];
 		} 
 		
 		
+		//$row = mysqli_fetch_assoc($mainObjectives);  
+		
 		if(mysqli_num_rows($mainObjectives) != 0) { ?>
 		<div id="mainObjectives">
 			
@@ -93,11 +95,15 @@ $week = $_GET['week'];
 			<ul>
 			<?php 
 			
-				for ($x = 0; $x < mysqli_num_rows($mainObjectives); $x++){
- $row = mysqli_fetch_assoc($mainObjectives);  
-				
- echo "<li>" . $row['fileName'] . "</li>"; 
-}
+				//for ($x = 0; $x < mysqli_num_rows($mainObjectives); $x++){
+					
+					while($row = mysqli_fetch_assoc($mainObjectives) ){
+				$name = $row['fileName'];
+						
+						if($row['weekAvailable'] == $week){
+ echo "<li>" . $name . "</li>"; 
+				}}
+//}
 			
 		mysqli_free_result($mainObjectives);
 		mysqli_close($connection);
