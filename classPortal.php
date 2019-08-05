@@ -50,22 +50,52 @@ $week = $_GET['week'];
 			
 		</div>
 		
-	
-		
 		<div id ="lessonPlans" class="w3-container class" style="display:none">
-			<p>Lesson Plans here</p>
+			
+			<br>
 			
 			<ol>
-			<li><a href="lessonPlanPortal.php">Link</a></li>
-				<!--
-
-					IDK if the link should be the lesson plan name alone or 
-					"Week #: LESSON NAME"
-
-					Link to new page, displaying the chosen lesson plan. Includes a blurb about what the workbook dicsusses, the main learning objectives of the week, links to videos and files, practice problems, and supplemetary information. 	
-
-				-->
-			
+				
+			<?php
+				
+				$query = "SELECT * FROM " . $course;
+				
+				$courseFiles = mysqli_query($connection,$query);
+				
+				if(!$courseFiles)
+					{
+    					die("database query fail");
+					} 
+		
+					$i = 0; 
+					while($i<= $week){
+    
+						$link = 'lessonPlanPortal.php?course=' . $course . '&week=' . $i;
+						
+						$row = mysqli_fetch_assoc($courseFiles);
+						
+						
+						
+						//make an array of all lesson plan namesa nd they're weeks. then sort it, and if the week abailable has a anme, use it. 
+						
+						//if($row['fileType'] == lessonPlanName && $row['weekAvailable'] == $i){
+//							echo "<li style='font-size: 20px'><a 
+//						href='" . $link . "'> Week " . $i . ": " .  $row['lessonPlanName'] . "</a></li>";
+//						} 
+//						
+//						else {
+						
+							echo "<li><a 
+							href='" . $link . "'>Week " . $i . "</a></li>";
+							
+							
+						//}
+						
+					$i++;
+					}
+					
+			?>
+				
 			</ol>
 			
 			
