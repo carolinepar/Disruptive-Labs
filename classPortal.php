@@ -94,6 +94,8 @@ $week = $_GET['week'];
 					$i++;
 					}
 					
+				mysqli_free_result($courseFiles);
+				mysqli_close($connection);
 			?>
 				
 			</ol>

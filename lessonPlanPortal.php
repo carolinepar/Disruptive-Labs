@@ -18,6 +18,14 @@ $week = $_GET['week'];
 </head>
 
 <body>
+	
+	<?php 
+	
+		
+		
+	?>
+	
+	
 	<header>
 	
 		<a href="index.html"><img id="logo" src="pictures/logo.png" alt="logo" width="50" height="50"/></a>
@@ -28,8 +36,8 @@ $week = $_GET['week'];
 			<ul>
 		
 				<li><a href="index.html" target='_self'>Home</a></li>
-				<li><a href="#" target='_self'>My Classes</a></li>
-				<li><a href="#" target='_self'>Enter A Code</a></li>
+				<li><a href="login_portal.php" target='_self'>My Classes</a></li>
+				<li><a href="login_portal.php" target='_self'>Enter A Code</a></li>
 				<li><a href="#" target='_self'>Payment</a></li>
 				<li><a href="#" target='_self'>Settings</a></li>
 				<li><a href="logoutProcess.php" target='_self'>Log Out</a></li>
@@ -62,25 +70,44 @@ $week = $_GET['week'];
 		
 		
 		
+		<h3 style="font-size: 36px;">Lesson Plan Name</h3><!--add style later-->
+		
+		<br>
+		<?php 
+		
+		$query = "SELECT * FROM " . $course . " WHERE fileType='mainObjective'";
+		$mainObjectives = mysqli_query($connection,$query);
+		
+		if(!$mainObjectives)
+		{
+ 			die("database query fail");
+		} 
 		
 		
-		
-		<h3>Lesson Plan Name</h3><!--add style later-->
-		
-		<br><br>
-		
+		if(mysqli_num_rows($mainObjectives) != 0) { ?>
 		<div id="mainObjectives">
+			
+			<!-- if there are main objectives, use this. Otherwise, leave it blank -->
+			
 			<h3>Main Objectives</h3>
 			<br>
 			<ul>
-				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+			<?php 
 			
+				for ($x = 0; $x < mysqli_num_rows($mainObjectives); $x++){
+ $row = mysqli_fetch_assoc($mainObjectives);  
+				
+ echo "<li>" . $row['fileName'] . "</li>"; 
+}
+			
+		mysqli_free_result($mainObjectives);
+		mysqli_close($connection);
+			
+			?>
 			</ul>
 		
 		</div><!--end main objectives-->
-		
+		<?php } ?>
 		<br><br>
 		
 		<h3>Video Name</h3>		
