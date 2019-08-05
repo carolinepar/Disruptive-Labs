@@ -52,13 +52,12 @@ $week = $_GET['week'];
 		<h1 class="w3-container">Course Name</h1><br>
 	
 		<div class="w3-bar w3-black">
-			<button class="w3-bar-item w3-button" onclick="openTab('Files')">Files</button>
-			<button class="w3-bar-item w3-button" onclick="openTab('Lectures')">Lectures</button>
-			<button class="w3-bar-item w3-button" onclick="openTab('Videos')">Videos</button>
+			
 			<button class="w3-bar-item w3-button" onclick="openTab('lessonPlans')">Lesson Plans </button>
 			<button class="w3-bar-item w3-button" onclick="openTab('Problem_Sets')">Problem Sets</button>
 			<button class="w3-bar-item w3-button" onclick="openTab('Tutoring')">Tutoring</button>
-			<button class="w3-bar-item w3-button" onclick="openTab('Settings'">Settings</button>
+			<button class="w3-bar-item w3-button" onclick="openTab('gradebook'">Gradebook</button>
+			
 		</div>
 		
 		<br>
